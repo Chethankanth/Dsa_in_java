@@ -1,0 +1,20 @@
+public class TwoSum{
+    public static void twoSumRec(int arr[],int i){
+    if(i>=arr.length-1) {
+        return;
+    }
+    int sum = arr[i]+arr[i+1];
+    System.out.println("the 2sum is: "+sum);
+    twoSumRec(arr,i+1);
+    return;
+}
+
+public static void main(String[]args){
+    
+    int arr[]={1,2,3,4,5,6};
+    TwoSum obj = new TwoSum();
+    obj.twoSumRec(arr,0);
+    
+}
+    
+}
