@@ -84,6 +84,49 @@ public class BinarySearchTrees {
                 }
             }
         }
+
+        //calculate nodes
+        public static int calculateNodes(Node root){
+            if(root == null){
+                return 0;
+            }
+
+            int lNodes = calculateNodes(root.left);
+            int rNodes = calculateNodes(root.right);
+            return lNodes+rNodes+1;
+        }
+        //calculate nodes
+        public static int calculateSum(Node root){
+            if(root == null){
+                return 0;
+            }
+
+            int lNodes = calculateSum(root.left);
+            int rNodes = calculateSum(root.right);
+            return lNodes+rNodes+root.data;
+        }
+        public static int height(Node root){
+            if(root == null){
+                return 0;
+            }
+
+            int lNodes = height(root.left);
+            int rNodes = height(root.right);
+            int height = Math.max(lNodes, rNodes)+1;
+            return height;
+
+        }
+        public static int diameter(Node root){
+            if(root == null){
+                return 0;
+            }
+
+            int dia1 = diameter(root.left);
+            int dia2 = diameter(root.right);
+            int height = height(root.left)+height(root.right)+1;
+            return Math.max(height,Math.max(dia1,dia2));
+        }
+        
     }
 
     public static void main(String[] args) {
@@ -100,22 +143,33 @@ public class BinarySearchTrees {
         else if(n==2){
              System.out.println("the inorder of the tree is: ");
         //calls the inorder
-        bt.inOrder(root);
+        bt.inOrder(root);//O(n)
 
         }
         
        else if(n==3){
             System.out.println("the postorder of the tree is: ");
-        bt.postOrder(root);
+        bt.postOrder(root);//0(n)
 
        }
        else if(n==4){
         System.out.println("level order: ");
-        bt.levelOrder(root);
+        bt.levelOrder(root);//O(n)
+       }
+       else if(n==5){
+        System.out.println("the number of nodes present in the tree are: ");
+        System.out.println(bt.calculateNodes(root));//0(n)
+
        }
        else{
         System.out.println("wrong choice!..");
        }
+       System.out.println("the sum is: ");
+       System.out.println(bt.calculateSum(root));
+       System.out.println("the height is: ");
+       System.out.println(bt.height(root));
+       System.out.println("this is the diameter of the tree: ");
+       System.out.println(bt.diameter(root));//O(n^2);
     
     }
 }
