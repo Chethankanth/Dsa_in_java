@@ -11,8 +11,9 @@ public  class Union {
         for(int i= 0;i<arr2.length;i++){
             hs.add(arr2[i]);
         }
-
+        System.out.println(hs);
         return hs.size();
+
     }
 
     public static void main(String[]args){

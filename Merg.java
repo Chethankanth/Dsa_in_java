@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Merg {
 
-    // Correct spelling to 'conquer'
+   
     public static void conquer(int arr[], int si, int mid, int end) {
         int merged[] = new int[end - si + 1];
         int idx1 = si;
