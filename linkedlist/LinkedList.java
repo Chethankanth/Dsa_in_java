@@ -54,7 +54,6 @@ public class LinkedList {
                 System.out.print(curr.data+ " -> ");
                 curr = curr.next;
             }
-
         }
         System.out.println("NULL");
     }

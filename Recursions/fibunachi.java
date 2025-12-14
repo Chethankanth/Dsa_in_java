@@ -17,7 +17,6 @@ public class fibunachi{
         int n=7;
         int a = 0;
         int b = 1;
-        int fact ;
         System.out.println(a);
         System.out.println(b);
         fibumachi(a,b,n-2);

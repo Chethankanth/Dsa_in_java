@@ -1,7 +1,7 @@
 package Hashing;
 import java.util.*;
 
-import LinkedList;
+
 public class HashMapCode {
 static class HashMap<K,V> { //generics
 private class Node {

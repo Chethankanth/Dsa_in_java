@@ -147,10 +147,8 @@ public class Queues{
                     System.out.println("enter the elements");
                     int e = sc.nextInt();
                     q.add(e);
-
                 }
             }
-
 
                 while(!q.isEmpty()){
                     System.out.println(q.peek());

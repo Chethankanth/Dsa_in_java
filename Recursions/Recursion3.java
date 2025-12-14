@@ -12,7 +12,7 @@ public class Recursion3 {
 
 
    public static void main(String args[]) {
-       int n = 3;
+       int n = 12;
        System.out.println(pairFriends(n));
    }
 }
